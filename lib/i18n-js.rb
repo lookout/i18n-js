@@ -122,7 +122,7 @@ module SimplesIdeias
       file = Rails.root.join(file)
       FileUtils.mkdir_p File.dirname(file)
 
-      File.open(file, "w+") do |f|
+      File.open(file, "wb+") do |f|
         f << %(var I18n = I18n || {};\n)
         f << %(I18n.translations = );
         f << translations.to_json
